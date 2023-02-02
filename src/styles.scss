@@ -1,0 +1,114 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap');
+
+$primary-color: #303030;
+$secondary-color: #FAF8FF;
+$danger: #FF00FF;
+$success: #00B46A;
+$reset-hover: #F9F871;
+$submit-hover: #76007A;
+$submit-hover-background: #839B00;
+$reset-hover-background: #FA5D00;
+$input-background: #6DBAA0;
+$input-background-focus: #C9FCE9;
+$submit-background-focus: #839B00;
+
+* {
+  box-sizing: border-box;
+  font-family: Roboto Mono, monospace;
+  color: $primary-color;
+}
+
+body {
+  background-image: linear-gradient(
+    to top,
+    rgba(#DAC3D6, 0.9),
+    rgba(#C8FCEA, 0.8),
+    rgba(#D9F3F3, 0.9)
+  ), url('./3.png');
+  background-size: cover;
+  height: 100vh;
+}
+
+h1 {
+  text-align: center;
+  margin: 2rem auto 2rem auto;
+}
+
+.p {
+  width: 70%;
+  margin: auto;
+}
+
+.formContainer {
+  height: 30vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.form {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  margin: 0.5rem auto 0.5rem auto;
+  width: 35%;
+  * {
+    margin: 0.3rem;
+  }
+
+  label {
+    display: inline-block;
+    align-self: center;
+  }
+
+  input[type="text"] {
+    border-radius: 15px;
+    border: 0px transparent;
+    background-color: $input-background;
+    box-shadow: inset 2px 2px $primary-color;
+    height: 2rem;
+    &:focus {
+      background-color: $input-background-focus;
+    }
+  }
+
+  input[type="submit"] {
+    background-color: $success;
+    color: $secondary-color;
+    box-shadow: 5px 5px 5px $primary-color;
+    border-radius: 10px;
+    border: 0px transparent;
+    width: 4rem;
+    height: 2rem;
+    &:hover {
+      background-color: $submit-hover-background;
+      color: $submit-hover;
+      transform: scale(1.2);
+    }
+  }
+}
+
+.resultContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  * {
+    margin: 0.5rem;
+  }
+
+  button {
+    color: $secondary-color;
+    background-color: $danger;
+    border: 0px transparent;
+    border-radius: 10px;
+    width: 5rem;
+    height: 2rem;
+    box-shadow: 7px 5px 5px $primary-color;
+    &:hover {
+      transform: scale(1.4);
+      color: $reset-hover;
+      background-color: $reset-hover-background;
+    }
+  }
+}

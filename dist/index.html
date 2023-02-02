@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portaone</title>
+</head>
+<body>
+  <h1>"Find the first unique letter"</h1>
+  <p class="p">
+    The program accepts an arbitrary text as input 
+    and finds in each word of this text the very 
+    first symbol that is NOT repeated in the analyzed word.
+
+    Further, from the received set of symbols, the program 
+    selects the first unique one (that is, the one that 
+    is no longer found in the set) and returns it.
+  </p>
+  <div class="formContainer">
+    <form id="form" class="form">
+      <label
+        for="sentence"
+      >
+        Enter sentence/phrase
+      </label>
+      <input type="text" autocomplete="off" id="input" />
+      <input type="submit" value="Submit" />
+    </form>
+  </div>
+  <div id="result" class="resultContainer"></div>
+  <script src="main.js"></script>
+</body>
+</html>
